@@ -29,14 +29,13 @@ class B extends A {
     }
 }
 
-public class AccessModifierBinding extends A {
+public class AccessModifierBinding {
     public static void main(String[] args) {
         A a = new B();
         a.method1();
         a.method2();
         // B class
         // A class
-        System.out.println();
     }
 }
 
