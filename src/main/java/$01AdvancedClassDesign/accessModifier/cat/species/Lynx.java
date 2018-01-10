@@ -1,6 +1,6 @@
-package accessModifier.cat.species;
+package $01AdvancedClassDesign.accessModifier.cat.species;
 
-import accessModifier.cat.BigCat;
+import $01AdvancedClassDesign.accessModifier.cat.BigCat;
 
 /**
  * Created by Dmitrii on 10.01.2018.

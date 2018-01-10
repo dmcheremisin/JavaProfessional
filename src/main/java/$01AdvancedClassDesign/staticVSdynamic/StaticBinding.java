@@ -1,15 +1,10 @@
-package staticVSdynamic;
+package $01AdvancedClassDesign.staticVSdynamic;
 
 /**
  * Created by Dmitrii on 09.01.2018.
  */
-class One {
-
-}
-
-class Two extends One {
-
-}
+class One {}
+class Two extends One {}
 
 public class StaticBinding {
 
@@ -18,10 +13,10 @@ public class StaticBinding {
         One one = new Two();
         test(one);
         // One class
-        // class exercises.staticVSdynamic.Two
+        // class $01AdvancedClassDesign.staticVSdynamic.Two
         staticBinding.verify(one);
         // One class
-        // class exercises.staticVSdynamic.Two
+        // class $01AdvancedClassDesign.staticVSdynamic.Two
     }
 
     static void test(One obj) {

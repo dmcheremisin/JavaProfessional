@@ -1,4 +1,4 @@
-package accessModifier.cat;
+package $01AdvancedClassDesign.accessModifier.cat;
 
 /**
  * Created by Dmitrii on 10.01.2018.

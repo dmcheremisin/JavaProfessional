@@ -1,4 +1,4 @@
-package staticVSdynamic;
+package $01AdvancedClassDesign.staticVSdynamic;
 
 /**
  * Created by Dmitrii on 09.01.2018.

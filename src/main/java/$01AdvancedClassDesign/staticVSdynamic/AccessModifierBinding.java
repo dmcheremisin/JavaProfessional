@@ -1,4 +1,4 @@
-package staticVSdynamic;
+package $01AdvancedClassDesign.staticVSdynamic;
 
 /**
  * Created by Dmitrii on 09.01.2018.
@@ -24,7 +24,7 @@ class B extends A {
         System.out.println("B class");
     }
     // ---------------------------
-    private void getClassName2() {
+    public void getClassName2() {
         System.out.println("B class");
     }
 }

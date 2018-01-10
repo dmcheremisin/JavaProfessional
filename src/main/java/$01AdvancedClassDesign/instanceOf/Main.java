@@ -1,6 +1,4 @@
-package instanceOf;
-
-import javax.xml.bind.Element;
+package $01AdvancedClassDesign.instanceOf;
 
 /**
  * Created by Dmitrii on 10.01.2018.
