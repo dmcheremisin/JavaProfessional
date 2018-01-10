@@ -14,6 +14,9 @@ class Parent {
     public String getName() {
         return name;
     }
+    public String printName() {
+        return name;
+    }
     public String getSName() {
         return sName;
     }
@@ -44,17 +47,20 @@ public class FieldsInheritance {
     public static void main(String[] args) {
         Parent parent = new Child();
         System.out.println(parent.name);
+        // A class
         System.out.println(parent.sName);
         // A class
-        // A class
+
         System.out.println(" =============== ");
         System.out.println(parent.getString());
+        // B class
         System.out.println(parent.getName());
+        // B class
+        System.out.println(parent.printName());
+        // A class
         System.out.println(parent.getSName());
+        // B class
         System.out.println(parent.getStatic());
-        // B class
-        // B class
-        // B class
         // A class
     }
 }
