@@ -23,6 +23,12 @@ public class Anonymous {
         // doesn't compile if created as new AbstractSale() {....
         // compilator insists to create instance from non static context
         AbstractSale abstractSale = a.new AbstractSale() {
+            int i = 0;
+            static final int j = 0;
+            // static int k = 0; static is not allowed
+            /*static void printMyName() {
+                System.out.println("Anonymous");
+            }*/ //static method is not allowed
             @Override
             int dollarsOff() {
                 return 3;

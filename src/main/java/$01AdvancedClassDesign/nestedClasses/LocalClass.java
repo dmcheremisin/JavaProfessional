@@ -20,6 +20,13 @@ public class LocalClass {
 
     private Object getReturnClass() {
         class SimpleLocal {
+            // static int i = 1; this is not allowed
+            // local classes can't have non-static-final fields
+            int i = 0;
+            static final int j = 0;
+            /*static void printName () {
+                System.out.println();
+            }*/// static methods are not allowed
             @Override
             public String toString() {
                 return "Inside SimpleLocal class";

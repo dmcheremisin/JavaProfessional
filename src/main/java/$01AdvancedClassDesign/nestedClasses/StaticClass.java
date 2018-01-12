@@ -8,6 +8,10 @@ public class StaticClass {
     public static class Nested {
         private int price = 1;
         public String str = "New name";
+        static int i = 0;
+        static void staticMethod() {
+            System.out.println("Static method is allowed!");
+        }
 
         private void printOuter() {
             System.out.println(new StaticClass().name);

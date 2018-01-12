@@ -10,6 +10,10 @@ public class MemberInner {
 
     protected class Inner {
         public int repeat = 3;
+        // static int i = 0; inner class can't have static declarations
+        /*static void myMethod() {
+            System.out.println("Inner");
+        }*/// static methods are not allowed
         public void go(int j) {
             Stream.iterate(0, i -> i++).limit(repeat).forEach(i -> System.out.println(greeting));
             // OR
