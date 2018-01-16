@@ -17,7 +17,7 @@ public class ArrayListReview {
             add(1); add(2); add(new Integer(3)); add(4);
         }};
         list.remove(1);
-        System.out.println(list);
+        System.out.println(list);// [1, 3, 4]
     }
 
     private static void binarySearchTest() {
