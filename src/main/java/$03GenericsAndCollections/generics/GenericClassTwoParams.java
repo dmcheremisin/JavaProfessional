@@ -1,4 +1,4 @@
-package $03GenericsAndCollections.genericClasses;
+package $03GenericsAndCollections.generics;
 
 class Pair<T, U> {
     T first;
