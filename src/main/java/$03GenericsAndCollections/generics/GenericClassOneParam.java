@@ -2,7 +2,11 @@ package $03GenericsAndCollections.generics;
 
 class Crate<T> {
     T content;
+    // static T anotherContent; not allowed to use static with generics
     public void packCrate(T content) {
+        // T[] a = new T[3]; arrays are not allowed with generics
+        // new T(); not allowed with generics
+        // if (T instance of String) {} instanceof not allowed with generics
         this.content = content;
     }
     public T emptyCrate() {
