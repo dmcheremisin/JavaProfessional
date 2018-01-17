@@ -15,7 +15,7 @@ class Animal{}
 class Elephant extends Animal{}
 class Zebra extends Animal{}
 
-public class CrateExample {
+public class GenericClassOneParam {
     public static void main(String[] args) {
         Animal animal = new Animal();
         Elephant elephant = new Elephant();
