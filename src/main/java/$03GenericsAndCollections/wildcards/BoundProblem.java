@@ -11,15 +11,18 @@ public class BoundProblem {
 
         List<String> keywords = new ArrayList<>();
         keywords.add("java");
-        // printList(keywords); doesn't compile
+        printList(keywords);
+        // printObjectList(keywords); doesn't compile
 
         List objects = new ArrayList();
         objects.add("java");
         printList(objects);
+        printObjectList(objects);
     }
-
-    private static void printList(List<Object> list) {
+    private static void printList(List list) {
         list.forEach(System.out::println);
     }
-
+    private static void printObjectList(List<Object> list) {
+        list.forEach(System.out::println);
+    }
 }
