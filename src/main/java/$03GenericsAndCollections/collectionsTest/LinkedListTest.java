@@ -1,5 +1,6 @@
 package $03GenericsAndCollections.collectionsTest;
 
+import java.util.Deque;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -24,7 +25,7 @@ public class LinkedListTest {
         System.out.println(" ================== ");
 
         // LIFO
-        LinkedList<Integer> linkedList = new LinkedList<>();
+        Deque<Integer> linkedList = new LinkedList<>();
         linkedList.add(1);
         linkedList.add(2);
         System.out.println(linkedList); // [1, 2]

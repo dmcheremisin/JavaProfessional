@@ -1,6 +1,7 @@
 package $03GenericsAndCollections.collectionsTest;
 
 import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.Queue;
 
 public class ArrayDequeTest {
@@ -25,7 +26,7 @@ public class ArrayDequeTest {
         System.out.println(" ================== ");
 
         // LIFO
-        ArrayDeque<Integer> arrayDeque = new ArrayDeque<>();
+        Deque<Integer> arrayDeque = new ArrayDeque<>();
         arrayDeque.add(1);
         arrayDeque.add(2);
         System.out.println(arrayDeque); // [1, 2]
