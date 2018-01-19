@@ -20,29 +20,32 @@ public class ArrayDequeTest {
 
         System.out.println(queue.poll()); // 1
         System.out.println(queue.poll()); // 2
+        // queue.pop(); no pop method
 
         System.out.println(queue.peek()); // 3
 
         System.out.println(" ================== ");
 
         // LIFO
-        Deque<Integer> arrayDeque = new ArrayDeque<>();
-        arrayDeque.add(1);
-        arrayDeque.add(2);
-        System.out.println(arrayDeque); // [1, 2]
-        arrayDeque.offer(3);
-        arrayDeque.offer(4);
-        System.out.println(arrayDeque); // [1, 2, 3, 4]
-        arrayDeque.push(5);
-        arrayDeque.push(6);
-        System.out.println(arrayDeque); // [6, 5, 1, 2, 3, 4]
+        Deque<Integer> deque = new ArrayDeque<>();
+        deque.add(1);
+        deque.add(2);
+        System.out.println(deque); // [1, 2]
+        deque.offer(3);
+        deque.offer(4);
+        System.out.println(deque); // [1, 2, 3, 4]
+        deque.push(5);
+        deque.push(6);
+        System.out.println(deque); // [6, 5, 1, 2, 3, 4]
 
-        System.out.println(arrayDeque.peek()); // 6
+        System.out.println(deque.peek()); // 6
 
-        System.out.println(arrayDeque.poll()); // 6
-        System.out.println(arrayDeque.poll()); // 5
+        System.out.println(deque.pop()); // 6
+        System.out.println(deque.pop()); // 5
+        System.out.println(deque.poll()); // 1
+        System.out.println(deque.poll()); // 2
 
-        System.out.println(arrayDeque.peek()); // 1
+        System.out.println(deque.peek()); // 3
 
     }
 }

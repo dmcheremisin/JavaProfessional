@@ -19,6 +19,7 @@ public class LinkedListTest {
 
         System.out.println(queue.poll()); // 1
         System.out.println(queue.poll()); // 2
+        // queue.pop(); no pop method
 
         System.out.println(queue.peek()); // 3
 
@@ -38,8 +39,10 @@ public class LinkedListTest {
 
         System.out.println(linkedList.peek()); // 6
 
-        System.out.println(linkedList.poll()); // 6
-        System.out.println(linkedList.poll()); // 5
+        System.out.println(linkedList.pop()); // 6
+        System.out.println(linkedList.pop()); // 5
+        System.out.println(linkedList.poll()); // 1
+        System.out.println(linkedList.poll()); // 2
 
         System.out.println(linkedList.peek()); // 1
     }
