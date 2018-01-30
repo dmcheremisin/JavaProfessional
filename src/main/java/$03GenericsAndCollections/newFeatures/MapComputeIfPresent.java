@@ -15,12 +15,9 @@ public class MapComputeIfPresent {
 
         BiFunction<String, Integer, Integer> function = (k, v) -> v+1;
 
-        Integer jenny = counts.computeIfPresent("Jenny", function);
-        System.out.println(jenny); // 2
-        Integer tom = counts.computeIfPresent("Tom", function);
-        System.out.println(tom); // null
-        Integer sam = counts.computeIfPresent("Sam", function);
-        System.out.println(sam); // null
+        System.out.println(counts.computeIfPresent("Jenny", function));// 2
+        System.out.println(counts.computeIfPresent("Tom", function));// null
+        System.out.println(counts.computeIfPresent("Sam", function));// null
         System.out.println(counts);
         // {Tom=null, Jenny=2}
 
@@ -30,12 +27,9 @@ public class MapComputeIfPresent {
 
         BiFunction<String, Integer, Integer> nullFunc = (k, v) -> null;
 
-        Integer jenny1 = other.computeIfPresent("Jenny", nullFunc);
-        System.out.println(jenny1); // null
-        Integer tom1 = other.computeIfPresent("Tom", nullFunc);
-        System.out.println(tom1); // null
-        Integer sam1 = other.computeIfPresent("Sam", nullFunc);
-        System.out.println(sam1); // null
+        System.out.println(other.computeIfPresent("Jenny", nullFunc));// null
+        System.out.println(other.computeIfPresent("Tom", nullFunc));// null
+        System.out.println(other.computeIfPresent("Sam", nullFunc));// null
         System.out.println(other);
         // {Tom=null}
     }
