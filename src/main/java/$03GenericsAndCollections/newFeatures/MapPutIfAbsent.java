@@ -14,6 +14,7 @@ public class MapPutIfAbsent {
         System.out.println(trips); // {Jenny=Tram}
 
         trips.put("Tom", null);
+        System.out.println(trips); // {Tom=null, Jenny=Tram}
 
         // putIfAbsent
         System.out.println(trips.putIfAbsent("Tom", "Ship")); // null
