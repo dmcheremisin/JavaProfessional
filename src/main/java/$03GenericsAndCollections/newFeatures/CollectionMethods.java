@@ -28,6 +28,6 @@ public class CollectionMethods {
         animals.forEach(s -> System.out.println(s));
         animals.forEach(System.out::println);
         // Cat
-        // Tiger
+        // KTiger
     }
 }
