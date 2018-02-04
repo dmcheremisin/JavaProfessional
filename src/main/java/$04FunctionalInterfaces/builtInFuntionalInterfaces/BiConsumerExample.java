@@ -7,6 +7,17 @@ import java.util.function.BiConsumer;
 /**
  * Created by Dmitrii on 04.02.2018.
  */
+/*@FunctionalInterface
+public interface BiConsumer<T, U> {
+
+    *//**
+     * Performs this operation on the given arguments.
+     *
+     * @param t the first input argument
+     * @param u the second input argument
+     *//*
+    void accept(T t, U u);
+}*/
 public class BiConsumerExample {
     public static void main(String[] args) {
         Map<String, Integer> map = new HashMap<>();
