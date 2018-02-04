@@ -2,6 +2,7 @@ package $04FunctionalInterfaces.builtInFuntionalInterfaces;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Supplier;
 
 /**
@@ -27,11 +28,11 @@ public class SupplierExample {
         // 2018-02-04
         // 2018-02-04
 
-        Supplier<ArrayList<String>> list1 = () -> new ArrayList<String>();
+        Supplier<ArrayList<String>> list1 = () -> new ArrayList<>();
         Supplier<ArrayList<String>> list2 = ArrayList<String>::new;
-        Supplier<ArrayList<String>> list3 = ArrayList::new;
+        Supplier<List<String>> list3 = ArrayList::new;
 
-        ArrayList<String> arrayList = list3.get();
+        List<String> arrayList = list3.get();
         arrayList.add("First str");
         arrayList.add("Second str");
         System.out.println(arrayList);
