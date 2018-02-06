@@ -1,6 +1,5 @@
 package $04FunctionalInterfaces.streams;
 
-import java.util.Optional;
 import java.util.stream.Stream;
 
 /**
