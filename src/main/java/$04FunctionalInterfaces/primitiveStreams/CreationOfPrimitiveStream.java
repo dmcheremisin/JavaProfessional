@@ -29,7 +29,7 @@ public class CreationOfPrimitiveStream {
 
         // 4. range for IntStream and LongStream
         LongStream range = LongStream.range(1, 6);// 1 2 3 4 5
-        LongStream rangeClosed = LongStream.range(1, 6);// 1 2 3 4 5 6
+        LongStream rangeClosed = LongStream.rangeClosed(1, 6);// 1 2 3 4 5 6
 
         // 5. mapping from another stream type
         List<String> animals = Arrays.asList("penguine", "sheep", "elephant");
