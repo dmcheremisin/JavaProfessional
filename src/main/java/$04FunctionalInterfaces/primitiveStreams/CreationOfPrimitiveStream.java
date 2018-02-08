@@ -38,7 +38,7 @@ public class CreationOfPrimitiveStream {
         // back to stream of strings
         Stream<String> stringStream = doubleStream.mapToObj(v -> "value = " + v);
 
-        // from flatMap
+        // 6. from flatMap
         IntStream intStream1 = animals.stream().flatMapToInt(v -> IntStream.of(v.length()));
         IntStream intStream2 = Stream.of(animals, animals).flatMapToInt(v -> v.stream().mapToInt(a -> a.length()));
     }
