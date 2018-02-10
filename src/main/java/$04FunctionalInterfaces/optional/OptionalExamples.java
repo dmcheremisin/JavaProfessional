@@ -1,4 +1,4 @@
-package $04FunctionalInterfaces.common;
+package $04FunctionalInterfaces.optional;
 
 import java.util.Optional;
 
