@@ -22,5 +22,15 @@ public class Mapping {
         );
         System.out.println(mapping); // {5=l,b, 6=t}
 
+
+        Map<Integer, Optional<Character>> minBy = animals.stream().collect(
+                Collectors.groupingBy(String::length,
+                        Collectors.mapping(
+                                s -> s.charAt(0),
+                                Collectors.minBy(Comparator.comparingInt(s -> s))
+                        )
+                )
+        );
+        System.out.println(minBy);
     }
 }
