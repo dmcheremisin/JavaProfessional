@@ -20,7 +20,7 @@ public class Mapping {
                         )
                 )
         );
-        System.out.println(mapping);
+        System.out.println(mapping); // {5=l,b, 6=t}
 
     }
 }
