@@ -21,7 +21,8 @@ public class InstantExample {
 
         LocalDateTime ldt = LocalDateTime.of(ld, lt);
         System.out.println(ldt); // 2017-06-24T13:15
-        System.out.println(ldt.toInstant(ZoneOffset.UTC)); // 2017-06-24T13:15:00Z
+        ZoneOffset zoneOffset = ZoneOffset.of("+03:00");
+        System.out.println(ldt.toInstant(zoneOffset)); // 2017-06-24T13:15:00Z
 
         long epochSecond = instant.getEpochSecond();
         System.out.println(epochSecond); // 1498299300
