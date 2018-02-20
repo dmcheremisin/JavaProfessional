@@ -13,8 +13,8 @@ public class ParseNumbers {
         NumberFormat numFR = NumberFormat.getInstance(Locale.FRENCH);
 
         String number = "1,000,841.56";
-        System.out.println(numUS.parse(number));
-        System.out.println(numFR.parse(number));
+        System.out.println(numUS.parse(number)); // 1000841.56
+        System.out.println(numFR.parse(number)); // 1
 
         String numText = "456asdfsd";
         System.out.println(numFR.parse(numText)); // 456
@@ -28,11 +28,11 @@ public class ParseNumbers {
 
         String currencyUS = "$1,000,841.56";
         Number usNum = curUS.parse(currencyUS);
-        System.out.println((Double) usNum);
+        System.out.println((Double) usNum); // 1000841.56
         // System.out.println(curGE.parse(currencyUS)); throws ParseException
 
         String currencyRub = "1 000 841,56 руб.";
-        System.out.println(curRU.parse(currencyRub));
+        System.out.println(curRU.parse(currencyRub)); // 1000841.56
         // System.out.println(curUS.parse(currencyRub)); throws ParseException
     }
 }
