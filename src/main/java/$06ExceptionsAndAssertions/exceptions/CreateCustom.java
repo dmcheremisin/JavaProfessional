@@ -18,6 +18,7 @@ class CannotSwimException extends Exception{
 class DangerInTheWater extends RuntimeException{}
 class SharkInTheWater extends DangerInTheWater{
     public SharkInTheWater() {
+        super();
     }
 }
 
