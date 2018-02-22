@@ -17,6 +17,7 @@ public class SuppressedExceptions {
     public static void main(String[] args) {
         try (Cage cage1 = new Cage(1);
              Cage cage2 = new Cage(2)) {
+            System.out.println("INSIDE TRY");
             throw new IllegalArgumentException("Exception form try");
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -27,5 +28,13 @@ public class SuppressedExceptions {
         } finally {
             throw new RuntimeException("Exception from finally");
         }
+        // INSIDE TRY
+        //Exception in thread "main" java.lang.RuntimeException: Exception from finally
+        //Close: 2
+        //	at $06ExceptionsAndAssertions.exceptions.SuppressedExceptions.main(SuppressedExceptions.java:29)
+        //Close: 1
+        //Exception form try
+        //Suppresed Autocloseable exception from: 2
+        //Suppresed Autocloseable exception from: 1
     }
 }
