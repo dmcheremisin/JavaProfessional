@@ -8,10 +8,15 @@ import java.nio.file.Paths;
  */
 public class FileSample {
     public static void main(String[] args) {
-        // get current directory -> C:\Workspace\JavaProfessional
-        System.out.println(Paths.get(".").toAbsolutePath().normalize().toString());
+        // get current directory
+        String currentDirectory = Paths.get(".").toAbsolutePath().normalize().toString();
+        System.out.println(currentDirectory); // C:\Workspace\JavaProfessional
 
-        File fileAbsPath = new File("C:\\Workspace\\JavaProfessional\\src\\main\\resources\\sample.txt");
+        // get directory separator
+        System.out.println(System.getProperty("file.separator")); // \
+        System.out.println(File.separator); // \
+
+        File fileAbsPath = new File(currentDirectory + "\\src\\main\\resources\\sample.txt");
         System.out.println(fileAbsPath.exists()); //true
 
         File fileRelPath = new File("src\\main\\resources\\sample.txt");
