@@ -16,10 +16,17 @@ public class FileSample {
         System.out.println(System.getProperty("file.separator")); // \
         System.out.println(File.separator); // \
 
+        // use absolute path
         File fileAbsPath = new File(currentDirectory + "\\src\\main\\resources\\sample.txt");
         System.out.println(fileAbsPath.exists()); //true
 
+        // use relative path
         File fileRelPath = new File("src\\main\\resources\\sample.txt");
         System.out.println(fileRelPath.exists()); // true
+
+        // use parent path
+        File parent = new File(currentDirectory);
+        File child = new File(parent, "src\\main\\resources\\sample.txt");
+        System.out.println(child.exists()); // true
     }
 }
