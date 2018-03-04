@@ -11,10 +11,16 @@ public class BufferedInputOutputStream {
     public static void copy(String isFile, String outFile) {
         try(BufferedInputStream is = new BufferedInputStream(new FileInputStream(DIR + isFile));
             BufferedOutputStream os = new BufferedOutputStream(new FileOutputStream(DIR + outFile))){
-            // read 1024 bytes
+            // read 1024 bytes, this method will add additional empty bytes if read length is < 1024
             byte[] read = new byte[1024];
             while(is.read(read) != -1){
                 os.write(read);
+            }
+            // read 1024 bytes, write with offset and length
+            int length;
+            while((length = is.read(read)) > 0) {
+                os.write(read, 0, length);
+                os.flush();
             }
             //      read byte by byte
             int oneByte;
