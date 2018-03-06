@@ -1,0 +1,3 @@
+5
+Animal[name='Tiger', age=5, type='T']
+Animal[name='Tiger', age=5, type='T']
