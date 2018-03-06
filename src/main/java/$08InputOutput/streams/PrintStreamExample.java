@@ -23,7 +23,7 @@ public class PrintStreamExample {
     private static void tryPrintAndWrite() throws IOException {
         try (PrintStream pw = new PrintStream(DIR + "zoo2.txt")) {
             pw.print(5);
-            pw.write(5); // accepts only Strings, will produce broken symbol []
+            pw.write(5); // will produce broken symbol []
             //pw.write("5"); accepts int or byte array
             pw.println();
 
