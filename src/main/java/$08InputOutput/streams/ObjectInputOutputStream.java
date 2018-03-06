@@ -7,6 +7,24 @@ import java.util.List;
 /**
  * Created by Dmitrii on 05.03.2018.
  */
+class SerializableAnimal implements Serializable {
+    private static final long serialVersionUID = 1L;
+    private String name;
+    private transient int age;
+    private String type;
+
+    public SerializableAnimal(String name, int age, String type) {
+        this.name = name;
+        this.age = age;
+        this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        return "SerializableAnimal["+"name='" + name + '\'' + ", age=" + age + ", type='" + type + '\'' + ']';
+    }
+}
+
 public class ObjectInputOutputStream {
     private static String DIR = "src\\main\\resources\\";
 
@@ -20,9 +38,9 @@ public class ObjectInputOutputStream {
         writeAnimals(file, animals);
         List<SerializableAnimal> newAnimals = readAnimals(file);
         newAnimals.forEach(System.out::println);
-        // SerializableAnimal{name='Tiger', age=0, type='T'}
-        // SerializableAnimal{name='Koala', age=0, type='K'}
-        // SerializableAnimal{name='Cat', age=0, type='C'}
+        // SerializableAnimal[name='Tiger', age=0, type='T']
+        // SerializableAnimal[name='Koala', age=0, type='K']
+        // SerializableAnimal[name='Cat', age=0, type='C']
     }
 
     private static List<SerializableAnimal> readAnimals(File file) throws IOException, ClassNotFoundException {
