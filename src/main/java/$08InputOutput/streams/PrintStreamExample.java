@@ -12,7 +12,7 @@ public class PrintStreamExample {
         tryFormatAndPrintf();
     }
 
-    private static void tryFormatAndPrintf() throws IOException {
+    private static void tryFormatAndPrintf() throws FileNotFoundException {
         try(PrintStream pw = new PrintStream(new BufferedOutputStream(new FileOutputStream(DIR + "zoo3.txt")))){
             pw.format("Today is %s weather", "sunny"); // Today is sunny weather
             pw.println();
