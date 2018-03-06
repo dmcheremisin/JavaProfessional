@@ -13,5 +13,8 @@ public class SimpleConsole {
             String userInput = console.readLine();
             console.writer().println("You entered the following: " + userInput);
         }
+        // java.io.Console@4aa298b7
+        // HEllo
+        // You entered the following: HEllo
     }
 }
