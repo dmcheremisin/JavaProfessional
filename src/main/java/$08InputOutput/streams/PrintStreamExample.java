@@ -13,23 +13,23 @@ public class PrintStreamExample {
     }
 
     private static void tryFormatAndPrintf() throws FileNotFoundException {
-        try(PrintStream pw = new PrintStream(new BufferedOutputStream(new FileOutputStream(DIR + "zoo3.txt")))){
-            pw.format("Today is %s weather", "sunny"); // Today is sunny weather
-            pw.println();
-            pw.printf("It is raining %s days per year", 123); // It is raining 123 days per year
+        try(PrintStream ps = new PrintStream(new BufferedOutputStream(new FileOutputStream(DIR + "zoo3.txt")))){
+            ps.format("Today is %s weather", "sunny"); // Today is sunny weather
+            ps.println();
+            ps.printf("It is raining %s days per year", 123); // It is raining 123 days per year
         }
     }
 
     private static void tryPrintAndWrite() throws IOException {
-        try (PrintStream pw = new PrintStream(DIR + "zoo2.txt")) {
-            pw.print(5);
-            pw.write(5); // will produce broken symbol []
-            //pw.write("5"); accepts int or byte array
-            pw.println();
+        try (PrintStream ps = new PrintStream(DIR + "zoo2.txt")) {
+            ps.print(5);
+            ps.write(5); // will produce broken symbol []
+            //ps.write("5"); method that accepts String has private access only
+            ps.println();
 
             Animal animal = new Animal("Tiger", 5, 'T');
-            pw.println(animal);
-            pw.write(animal.toString().getBytes());
+            ps.println(animal);
+            ps.write(animal.toString().getBytes());
         }
         // 5
         // Animal[name='Tiger', age=5, type='T']
