@@ -1,6 +1,6 @@
-package $08InputOutput.console;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.Console;
 import java.io.IOException;
 
@@ -18,8 +18,9 @@ public class ConsoleReadInput {
 
             String name = console.readLine("Enter your name: ");
 
-            console.writer().print("What is your age?");
-            console.flush();
+            BufferedWriter bw = new BufferedWriter(console.writer());
+            bw.write("What is your age?");
+            bw.flush();
             BufferedReader br = new BufferedReader(console.reader());
             String value = br.readLine();
             Integer age = Integer.parseInt(value);
@@ -31,7 +32,14 @@ public class ConsoleReadInput {
             console.writer().println();
             console.printf("Your excitement level is : %s", excitement);
 
-
+            //How excited are you about your trip?
+            //high
+            //Enter your name: Dima
+            //What is your age?28
+            //
+            //Your name is Dima
+            //Your age is 28
+            //Your excitement level is : high
         }
     }
 }
