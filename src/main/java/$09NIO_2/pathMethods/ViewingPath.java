@@ -1,4 +1,4 @@
-package $09NIO_2;
+package $09NIO_2.pathMethods;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
