@@ -14,6 +14,7 @@ public class NewPathWithSubpath {
         System.out.println("0-2 : " + path.subpath(0,2));
         System.out.println("1-3 : " + path.subpath(1,3));
         System.out.println("1-2 : " + path.subpath(1,2));
+        // System.out.println("1-2 : " + path.subpath(2,2)); IllegalArgumentException
         // System.out.println(path.subpath(1,4)); IllegalArgumentException
         // \mammal\tiger\sherkhan.jpg
         // 0-3 : mammal\tiger\sherkhan.jpg
