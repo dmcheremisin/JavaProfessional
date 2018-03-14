@@ -22,5 +22,14 @@ public class Relativize {
         // ..\bird.txt
         // ..\fish.txt
 
+        // we can't mix relative and absolute paths
+        Path path5 = Paths.get("/primate/ape.txt");
+        Path path6 = Paths.get("banana.txt");
+        // path5.relativize(path6); -> IllegalArgumentException
+
+        // we can't relativize on different drive letters for Windows
+        Path path7 = Paths.get("C:\\ape.txt");
+        Path path8 = Paths.get("E:\\banana.txt");
+        // path7.relativize(path8); -> IllegalArgumentException
     }
 }
