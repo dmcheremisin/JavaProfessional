@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 /**
  * Created by Dmitrii on 14.03.2018.
  */
-public class ViewingPath {
+public class NameStringNameCount {
     public static void main(String[] args) {
         Path path = Paths.get("some/root/directory/file.name");
         System.out.println("The path is: " + path.toString());

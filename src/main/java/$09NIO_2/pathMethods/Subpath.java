@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 /**
  * Created by Dmitrii on 14.03.2018.
  */
-public class NewPathWithSubpath {
+public class Subpath {
     public static void main(String[] args) {
         Path path = Paths.get("/mammal/tiger/sherkhan.jpg");
         System.out.println(path);

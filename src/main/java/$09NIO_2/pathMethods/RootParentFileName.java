@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 /**
  * Created by Dmitrii on 14.03.2018.
  */
-public class AccessingPath {
+public class RootParentFileName {
 
     public static void getPathInfo(Path path){
         System.out.println("File name is: " + path.getFileName());

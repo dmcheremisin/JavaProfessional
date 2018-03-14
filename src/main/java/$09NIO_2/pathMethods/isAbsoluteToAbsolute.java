@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 /**
  * Created by Dmitrii on 14.03.2018.
  */
-public class CheckPathType {
+public class isAbsoluteToAbsolute {
     public static void main(String[] args) {
         Path path1 = Paths.get("C:\\birds\\eagle.jpg");
         System.out.println("Is absolute: " + path1.isAbsolute());
