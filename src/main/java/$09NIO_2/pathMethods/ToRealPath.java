@@ -14,6 +14,10 @@ public class ToRealPath {
             System.out.println(file.toRealPath());
             // C:\Workspace\JavaProfessional\src\main\resources\animal.data
 
+            Path dir = Paths.get("C:\\Workspace\\");
+            System.out.println(dir.toRealPath());
+            // C:\Workspace
+
             Path notExist = Paths.get("some/strange/path.file");
             System.out.println(notExist.toRealPath());
         } catch (IOException e) {
