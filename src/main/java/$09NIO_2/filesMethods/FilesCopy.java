@@ -17,7 +17,7 @@ public class FilesCopy {
         Path file2 = path3.resolve("sample.txt");
         try {
             // Files.copy(path1, path2);
-            // IOException -> Can not copy: C:\main\resources
+            // IOException -> Can not copy: C:\main\resources, no main directory
             Files.copy(path1, path3); // copies directory
             Files.copy(file1, file2); // copies file
         } catch (IOException e) {
