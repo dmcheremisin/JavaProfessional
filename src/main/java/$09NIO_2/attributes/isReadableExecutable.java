@@ -5,9 +5,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 /**
- * @author dmch0916
- * Date: 19.03.2018
- * Time: 20:29
+ * Created by Dmitrii on 19.03.2018.
  */
 public class isReadableExecutable {
     public static void main(String[] args) {
