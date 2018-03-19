@@ -10,11 +10,10 @@ import java.nio.file.Paths;
 public class isFileDirectorySymbolicLink {
     public static void main(String[] args) {
         Path resources = Paths.get("src\\main\\resources\\");
-        Path dir = resources.resolve("dir");
         Path file = resources.resolve("sample.txt");
         Path link = resources.resolve("C:\\files\\linkToFile");
 
-        System.out.println(Files.isDirectory(dir));// true
+        System.out.println(Files.isDirectory(resources));// true
         System.out.println(Files.isRegularFile(file));// true
         System.out.println(Files.isSymbolicLink(link));// true
         System.out.println(Files.isRegularFile(link));// true
