@@ -11,7 +11,7 @@ public class isFileDirectorySymbolicLink {
     public static void main(String[] args) {
         Path resources = Paths.get("src\\main\\resources\\");
         Path file = resources.resolve("sample.txt");
-        Path link = resources.resolve("C:\\files\\linkToFile");
+        Path link = Paths.get("C:\\files\\linkToFile");
 
         System.out.println(Files.isDirectory(resources));// true
         System.out.println(Files.isRegularFile(file));// true
