@@ -15,6 +15,7 @@ public class GetSetLastModifiedTime {
         try {
             FileTime fileTime = Files.getLastModifiedTime(file);
             System.out.println(fileTime); // 2018-03-05T12:11:27.938543Z
+            System.out.println(fileTime.toMillis()); // 1521544687142
             Files.setLastModifiedTime(file, FileTime.fromMillis(System.currentTimeMillis()));
             System.out.println(Files.getLastModifiedTime(file)); // 2018-03-20T11:18:07.142Z
         } catch (IOException e) {
