@@ -12,8 +12,8 @@ import java.nio.file.attribute.FileTime;
  */
 public class Find {
     public static void main(String[] args) throws IOException {
-        Path file = Paths.get("src\\main\\resources\\sample.txt");
         Path path = Paths.get("src\\main\\resources\\");
+        Path file = path.resolve("sample.txt");
         BasicFileAttributes data = Files.readAttributes(file, BasicFileAttributes.class);
         FileTime sampleTime = data.creationTime();
 
