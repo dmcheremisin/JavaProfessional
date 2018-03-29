@@ -28,7 +28,7 @@ public class ScrollingResultSet {
             System.out.println(rs.first()); // true
             System.out.println(rs.getInt(1)); // 1
             rs.beforeFirst();
-            System.out.println(rs.getInt(1));// throws SQLException
+            System.out.println(rs.getInt(1));// throws SQLException no current row
         } catch (SQLException e) {
             System.out.println(e);
             e.printStackTrace();
