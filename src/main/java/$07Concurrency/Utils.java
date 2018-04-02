@@ -1,9 +1,7 @@
 package $07Concurrency;
 
 /**
- * @author dmch0916
- * Date: 02.04.2018
- * Time: 19:45
+ * Created by Dmitrii on 02.04.2018.
  */
 public class Utils {
 
