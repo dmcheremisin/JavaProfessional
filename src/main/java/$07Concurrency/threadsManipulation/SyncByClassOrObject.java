@@ -1,6 +1,5 @@
 package $07Concurrency.threadsManipulation;
 
-
 import $07Concurrency.Utils;
 
 public class SyncByClassOrObject {
@@ -12,18 +11,16 @@ public class SyncByClassOrObject {
         }
     }
 
-    static void printByClass() {
+    static private void printByClass() {
         synchronized (SyncByClassOrObject.class) {
             printCounter();
         }
     }
-
-    void printByObject() {
+    private void printByObject() {
         synchronized (this) {
             printCounter();
         }
     }
-
 
     public static void main(String[] args) {
         new Thread(SyncByClassOrObject::printByClass).start();
