@@ -15,7 +15,9 @@ public class ThreadCommunicationByCommand {
         @Override
         public void run() {
             long count = 0;
-            outer: while (true) {
+            
+            outer: 
+            while (true) {
                 if (Thread.interrupted()) {
                     switch (command) {
                         case NOP:
