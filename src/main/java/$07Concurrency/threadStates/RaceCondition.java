@@ -19,23 +19,15 @@ public class RaceCondition {
     }
 
     public static void main(String[] args) {
-        Thread t1 = new Thread(new Task());
-        Thread t2 = new Thread(new Task());
+        Task task = new Task();
+        Thread t1 = new Thread(task);
+        Thread t2 = new Thread(task);
         t1.start();
         t2.start();
 //        1
-//        1
 //        2
 //        2
+//        3
 //        4
-//        4
-//        5
-//        6
-//        8
-//        7
-//        9
-//        10
-//        11
-//        11
     }
 }
