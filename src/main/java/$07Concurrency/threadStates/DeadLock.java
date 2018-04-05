@@ -31,6 +31,9 @@ public class DeadLock {
                 }
             }
         }).start();
+
+        // Thread[Thread-0,5,main] java.lang.Object@499e17da
+        // Thread[Thread-1,5,main] java.lang.Object@670983ae
     }
 
 }
