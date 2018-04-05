@@ -1,4 +1,4 @@
-package $07Concurrency.threadStates;
+package $07Concurrency.threadConditions;
 
 import $07Concurrency.Utils;
 
