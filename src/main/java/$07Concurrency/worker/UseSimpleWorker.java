@@ -11,7 +11,7 @@ class SimpleWorker {
     }
 }
 
-public class UseWorkerSimpleWorker {
+public class UseSimpleWorker {
 
     public static void main(String[] args) {
         startWork(() -> {
