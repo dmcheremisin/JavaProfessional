@@ -13,7 +13,8 @@ import java.util.concurrent.SynchronousQueue;
  */
 public class ProducerConsumerUse {
 
-    static BlockingQueue<String> window = new LinkedBlockingDeque<>();
+    //static BlockingQueue<String> window = new SynchronousQueue<>(); -> will wait until waiter will take dish
+    static BlockingQueue<String> window = new LinkedBlockingDeque<>(); // doesn't wait for the waiter
 
     public static void main(String[] args) {
         Cooker cooker = new Cooker(window);
