@@ -10,19 +10,7 @@ class WorkerThread {
     WorkerThread() {
         new Thread(this::startWork).start();
     }
-    boolean submit(Runnable runnable) {
-        if(!mayAcceptTasks){
-            return false;
-        }
-        if(runnable == POISON_PILL){
-            mayAcceptTasks = false;
-        }
-        tasks.put(runnable);
-        return true;
-    }
-    void shutdown(){
-        submit(POISON_PILL);
-    }
+
     private void startWork() {
         while (true) {
             Runnable task = tasks.take();
@@ -31,6 +19,23 @@ class WorkerThread {
                 break;
             }
             task.run();
+        }
+    }
+
+    void shutdown(){
+        submit(POISON_PILL);
+    }
+
+    boolean submit(Runnable runnable) {
+        synchronized (POISON_PILL) {
+            if (!mayAcceptTasks) {
+                return false;
+            }
+            if (runnable == POISON_PILL) {
+                mayAcceptTasks = false;
+            }
+            tasks.put(runnable);
+            return true;
         }
     }
 }
