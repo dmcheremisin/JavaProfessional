@@ -31,5 +31,8 @@ public class CallableAndFutureExample {
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
+        // 1870140.4486455002
+        // main thread will be in Park state
+        // a pool is not shut down
     }
 }
