@@ -14,7 +14,7 @@ public class CallableAndFutureExample {
         public Double call() throws Exception {
             double result = 0;
             Random random = new Random();
-            for(int i = 0; i < 1_000_000; i++){
+            for(int i = 0; i < 1_000_000_00; i++){
                 result += Math.pow(Math.PI, random.nextDouble());
             }
             return result;
@@ -30,9 +30,10 @@ public class CallableAndFutureExample {
             System.out.println(aDouble);
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
+        } finally {
+            service.shutdown();
         }
         // 1870140.4486455002
-        // main thread will be in Park state
-        // a pool is not shut down
+        // main thread will be in Park state if service is not shut down
     }
 }
