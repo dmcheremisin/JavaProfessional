@@ -14,5 +14,9 @@ public class CompletableFutureExamples {
         CompletableFuture<Void> andAgain = CompletableFuture.runAsync(() -> {
             System.out.println("And again!");
         });
+
+        //hello
+        //world!
+        //And again!
     }
 }
