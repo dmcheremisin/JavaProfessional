@@ -7,13 +7,9 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 class Task implements Runnable {
-    private int millis;
-    public Task() {
-        this.millis = 1000;
-    }
     @Override
     public void run() {
-        Utils.pause(millis);
+        Utils.pause(1000);
         System.out.println("hello");
     }
 }
@@ -22,8 +18,7 @@ public class SingleThreadExecutorExample {
     public static void main(String[] args) {
         System.out.println("start");
 
-		ExecutorService service = Executors.newSingleThreadExecutor(); // serial
-//      ExecutorService service = Executors.newFixedThreadPool(2);
+		ExecutorService service = Executors.newSingleThreadExecutor(); // serial - one by one
 
         service.execute(new Task());
         service.execute(new Task());
