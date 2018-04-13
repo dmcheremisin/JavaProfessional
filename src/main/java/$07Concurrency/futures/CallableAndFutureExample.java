@@ -30,9 +30,9 @@ public class CallableAndFutureExample {
             System.out.println(aDouble);
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
-        } finally {
-            service.shutdown();
         }
+        service.shutdown();
+
         // 1870140.4486455002
         // main thread will be in Park state if service is not shut down
     }
