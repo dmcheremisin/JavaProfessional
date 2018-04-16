@@ -1,5 +1,7 @@
 package $07Concurrency.semaphore;
 
+import $07Concurrency.Utils;
+
 import java.util.Random;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -15,6 +17,7 @@ public class SemaphoreAsResourceUsageRegulator {
         for (int i = 0; i < data.length; i++) {
             data[i] = r.nextDouble();
         }
+        Utils.pause(500);
         return data;
     }
 
@@ -23,26 +26,38 @@ public class SemaphoreAsResourceUsageRegulator {
 //		ExecutorService service = Executors.newCachedThreadPool();
         ExecutorService service = Executors.newFixedThreadPool(2);
 
-        Semaphore sem = new Semaphore(4);
+        Semaphore sem = new Semaphore(2);
 
         while (true) {
             double[] data = generate();
+            System.out.println("Generated!");
             sem.acquireUninterruptibly();
             service.submit(() -> {
                 double sum = 0;
                 for (int i = 0; i < data.length; i++) {
                     sum += data[i];
                 }
-                System.out.println(sum);
+                System.out.println(Thread.currentThread().getName() + " total: " + sum);
                 sem.release();
             });
         }
 
-        //499822.87331229984
-        //500003.9609321466
-        //500327.6882003274
-        //499812.7205332079
-        //499633.60226575413
+        //Generated!
+        //pool-1-thread-1 total: 499724.9212917237
+        //Generated!
+        //pool-1-thread-2 total: 499664.869228776
+        //Generated!
+        //pool-1-thread-1 total: 499929.78705177066
+        //Generated!
+        //pool-1-thread-2 total: 499416.3317519768
+        //Generated!
+        //pool-1-thread-1 total: 500015.4923889134
+        //Generated!
+        //pool-1-thread-2 total: 500164.59003041557
+        //Generated!
+        //pool-1-thread-1 total: 500097.277804023
+        //Generated!
+        //pool-1-thread-2 total: 500339.540868629
 
 
     }
