@@ -41,7 +41,6 @@ public class CyclicBarrierExample {
         }
 
         private boolean done() {
-            // TODO Auto-generated method stub
             return false;
         }
     }
