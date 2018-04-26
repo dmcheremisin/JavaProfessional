@@ -4,6 +4,16 @@ import $07Concurrency.Utils;
 
 import java.util.concurrent.Semaphore;
 
+/*
+The argument to the Semaphore instance is the number of "permits" that are available. It can be any integer, not just 0 or 1.
+
+public static Semaphore semZero = new Semaphore(0);
+For semZero all acquire() calls will block and tryAcquire() calls will return false, until you do a release()
+
+public static Semaphore semOne = new Semaphore(1);
+For semOne the first acquire() calls will succeed and the rest will block until the first one releases.
+ */
+
 public class SemaphoreExample {
 
     public static void main(String[] args) {
