@@ -46,6 +46,7 @@ public class PartialSumCallable {
         }
         System.out.println("The sum = " + sum);
         service.shutdown();
+        // The sum = 500000005000000000
     }
 
 }
