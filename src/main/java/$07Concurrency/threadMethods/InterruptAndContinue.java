@@ -25,7 +25,7 @@ public class InterruptAndContinue extends Thread {
     }
 
     public static void main(String[] args) {
-        MyClass object = new MyClass(6, 1000);
+        InterruptAndContinue object = new InterruptAndContinue(6, 1000);
         object.start();
         //wait in main thread
         try {
