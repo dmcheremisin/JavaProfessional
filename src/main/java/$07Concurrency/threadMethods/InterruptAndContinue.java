@@ -53,7 +53,7 @@ public class InterruptAndContinue extends Thread {
         for (int i = 0; i < numberThreads; i++) {
             secObj[i].interrupt();
         }
-        System.out.println("MyClass is finished");
+        System.out.println("InterruptAndContinue is finished");
     }
 
     /*
@@ -67,7 +67,7 @@ public class InterruptAndContinue extends Thread {
     finished
     interrupted
     finished
-    MyClass is finished
+    InterruptAndContinue is finished
     interrupted
     finished
     Main thread is finished
