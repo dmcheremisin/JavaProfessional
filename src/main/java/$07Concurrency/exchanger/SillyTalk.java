@@ -49,4 +49,9 @@ public class SillyTalk {
         new Duke(message).start();
         new CoffeeShop(message).start();
     }
+//    Duke: Knock knock!
+//    CoffeeShop: Who's there?
+//    CoffeeShop: Duke who?
+//    Duke: Duke
+//    Duke: The one who was born in this coffee shop!
 }
