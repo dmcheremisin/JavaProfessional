@@ -34,4 +34,13 @@ public class CyclicBarrierTennisGame {
         new Player("Barak", barrier);
         new Player("Melani", barrier);
     }
+//    John is ready to start
+//    Barak is ready to start
+//    Lusi is ready to start
+//    Melani is ready to start
+//    All players are ready to play - starting!
+//    John is playing
+//    Barak is playing
+//    Lusi is playing
+//    Melani is playing
 }
