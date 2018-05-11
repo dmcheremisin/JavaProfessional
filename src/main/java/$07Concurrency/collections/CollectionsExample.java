@@ -4,6 +4,8 @@ import java.util.Deque;
 import java.util.Map;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentLinkedDeque;
+import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.LinkedBlockingQueue;
 
@@ -16,7 +18,7 @@ public class CollectionsExample {
         map.put("elephant", 10);
         System.out.println(map.get("elephant"));
 
-        Queue<String> blockingQueue = new LinkedBlockingQueue<>();
+        Queue<String> blockingQueue = new LinkedBlockingQueue<>(); // the same ConcurrentLinkedQueue
         blockingQueue.offer("one");
         blockingQueue.add("two");
         System.out.println(blockingQueue); // [one, two]
@@ -24,7 +26,7 @@ public class CollectionsExample {
         System.out.println(blockingQueue.poll()); // one
         System.out.println(blockingQueue); // [two]
 
-        Deque<String> blockingDeque = new LinkedBlockingDeque<>();
+        Deque<String> blockingDeque = new LinkedBlockingDeque<>(); // ConcurrentLinkedDeque
         blockingDeque.offer("one");
         blockingDeque.add("two");
         blockingDeque.push("three");
