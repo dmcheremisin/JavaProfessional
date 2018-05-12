@@ -17,7 +17,7 @@ public class SynchronizedCollectionMethods {
         set.add("one");
         set.add("two");
         Set<String> syncSet = Collections.synchronizedSet(set);
-        Set<String> sortedSet = Collections.synchronizedSortedSet(set);
+        SortedSet<String> sortedSet = Collections.synchronizedSortedSet(set);
         NavigableSet<String> navSet = Collections.synchronizedNavigableSet(set);
         syncSet.add("three");
 
