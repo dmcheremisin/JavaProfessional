@@ -30,5 +30,10 @@ public class MemberInnerLevels {
         A.B.C c1 = tl.new A().new B().new C();
         A.B b1 = new MemberInnerLevels().new A().new B();
         c1.printLevels();
+        //3
+        //3
+        //2
+        //1
+        //0
     }
 }
