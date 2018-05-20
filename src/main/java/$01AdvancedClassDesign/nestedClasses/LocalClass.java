@@ -26,7 +26,7 @@ public class LocalClass {
             static final int j = 0;
             /*static void printName () {
                 System.out.println();
-            }*/// static methods are not allowed
+            }*/// static and static+final methods are not allowed
             @Override
             public String toString() {
                 return "Inside SimpleLocal class";
@@ -41,5 +41,6 @@ public class LocalClass {
         // 2
 
         System.out.println(localClass.getReturnClass());
+        // Inside SimpleLocal class
     }
 }
