@@ -3,6 +3,16 @@ package $02DesignPatternsAndPrinciples.functionalInterface;
 /**
  * Created by Dmitrii on 12.01.2018.
  */
+@FunctionalInterface
+interface Sprint {
+    void printAction(Animal animal);
+}
+interface Run extends Sprint{
+    default void printName() {
+        System.out.println("My name is Run!");
+    }
+}
+
 public class Animal {
     public String name;
 
