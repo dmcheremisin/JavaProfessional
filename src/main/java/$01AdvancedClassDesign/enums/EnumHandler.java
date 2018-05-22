@@ -21,15 +21,18 @@ enum SeasonsLong {
 
     String seasonName;
     int visitors;
+    static String prefix = "Season: ";
 
     SeasonsLong(String seasonName, int visitors) {
+        // Unlike a regular java class, you cannot access a non-final static field from an enum's constructor. ( JLS 8.9.2 )
+        //this.seasonName = prefix + seasonName;
         this.seasonName = seasonName;
         this.visitors = visitors;
     }
 
     @Override
     public String toString() {
-        return this.seasonName + " visitors: " + this.visitors;
+        return prefix + this.seasonName + " visitors: " + this.visitors;
     }
 
     int getVisitors() {
