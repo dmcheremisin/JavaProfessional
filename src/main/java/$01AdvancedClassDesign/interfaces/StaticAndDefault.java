@@ -21,7 +21,7 @@ class HomeOffice implements House, Office {
         return "R No 1, Home";
     }
 }
-public class TestClass {
+public class StaticAndDefault {
     public static void main(String[] args) {
         Office off = new HomeOffice();
         System.out.println(Office.getAddress());// static method should be called only with interface reference
