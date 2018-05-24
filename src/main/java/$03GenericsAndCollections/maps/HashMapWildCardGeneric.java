@@ -1,4 +1,4 @@
-package $03GenericsAndCollections.hashmap;
+package $03GenericsAndCollections.maps;
 
 import java.util.ArrayList;
 import java.util.HashMap;
