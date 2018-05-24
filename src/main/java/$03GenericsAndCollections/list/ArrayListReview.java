@@ -1,4 +1,4 @@
-package $03GenericsAndCollections.arraylist;
+package $03GenericsAndCollections.list;
 
 import java.util.ArrayList;
 import java.util.Arrays;

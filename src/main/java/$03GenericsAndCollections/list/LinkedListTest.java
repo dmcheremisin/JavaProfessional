@@ -1,4 +1,4 @@
-package $03GenericsAndCollections.collectionsTest;
+package $03GenericsAndCollections.list;
 
 import java.util.Deque;
 import java.util.LinkedList;

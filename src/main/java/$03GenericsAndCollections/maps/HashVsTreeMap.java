@@ -1,4 +1,4 @@
-package $03GenericsAndCollections.collectionsTest;
+package $03GenericsAndCollections.maps;
 
 import java.util.HashMap;
 import java.util.Map;

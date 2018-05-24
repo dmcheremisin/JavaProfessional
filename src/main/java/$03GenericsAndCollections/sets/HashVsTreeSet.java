@@ -1,4 +1,4 @@
-package $03GenericsAndCollections.collectionsTest;
+package $03GenericsAndCollections.sets;
 
 import java.util.HashSet;
 import java.util.Set;

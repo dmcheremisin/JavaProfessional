@@ -1,4 +1,4 @@
-package $03GenericsAndCollections.collectionsTest;
+package $03GenericsAndCollections.queueStack;
 
 import java.util.Stack;
 
