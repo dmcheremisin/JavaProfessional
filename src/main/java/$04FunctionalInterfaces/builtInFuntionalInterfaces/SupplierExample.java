@@ -39,5 +39,11 @@ public class SupplierExample {
         // [First str, Second str]
         System.out.println(list2);
         // $04FunctionalInterfaces.builtInFuntionalInterfaces.SupplierExample$$Lambda$7/1791741888@3feba861
+
+        String name = "bob";
+        Supplier<String> s1 = () -> name.toUpperCase();
+        Supplier<String> s2 = name::toUpperCase;
+        System.out.println(s1.get()); // BOB
+        System.out.println(s2.get()); // BOB
     }
 }
