@@ -21,7 +21,10 @@ public class OffsetDateTimeAndZoned {
         System.out.println(ldt); // 2017-06-02T06:00
 
         ZoneOffset nyOffset = ZoneOffset.ofHoursMinutes(-5, 0);
+        System.out.println(nyOffset); // -05:00
+
         ZoneId nyZone = ZoneId.of("America/New_York");
+        System.out.println(nyZone.getRules()); // ZoneRules[currentStandardOffset=-05:00]
 
         OffsetDateTime nyOdt = ldt.atOffset(nyOffset);
         System.out.println(nyOdt); // 2017-06-02T06:00-05:00
