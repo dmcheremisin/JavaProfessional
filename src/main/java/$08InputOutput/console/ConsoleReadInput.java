@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.Console;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.Reader;
 
 /**
  * Created by Dmitrii on 07.03.2018.
@@ -19,12 +21,16 @@ public class ConsoleReadInput {
 
             String name = console.readLine("Enter your name: ");
 
-            BufferedWriter bw = new BufferedWriter(console.writer());
+            PrintWriter writer = console.writer();
+            BufferedWriter bw = new BufferedWriter(writer);
             bw.write("What is your age?");
             bw.flush();
-            BufferedReader br = new BufferedReader(console.reader());
+
+            Reader reader = console.reader();
+            BufferedReader br = new BufferedReader(reader);
             String value = br.readLine();
             Integer age = Integer.parseInt(value);
+
             console.writer().println();
 
             console.format("Your name is %s", name);

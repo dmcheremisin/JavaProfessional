@@ -23,6 +23,9 @@ public class SimpleConsole {
             console.printf("The zoo has %s tigers and %s bears", 2, 3);
             console.writer().println();
 
+            String line = console.readLine("Enter %s: ", "line");
+            console.writer().format("Your %s is %s", "line", line).format("Have a %s day", "nice");
+
         }
         // java.io.Console@4aa298b7
         // HEllo
@@ -31,5 +34,7 @@ public class SimpleConsole {
         // The weather is sunny today. It is raining 123 days.
         // London is the capital of the UK
         // The zoo has 2 tigers and 3 bears
+        // Enter line: 12345
+        // Your line is 12345Have a nice day
     }
 }
