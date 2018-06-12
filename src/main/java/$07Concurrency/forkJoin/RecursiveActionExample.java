@@ -1,4 +1,4 @@
-package $07Concurrency.ForkJoin;
+package $07Concurrency.forkJoin;
 
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveAction;
