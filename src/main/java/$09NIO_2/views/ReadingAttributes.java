@@ -23,9 +23,17 @@ public class ReadingAttributes {
             System.out.println("Modified date/time: " + data.lastModifiedTime());
             System.out.println("Access date/time: " + data.lastAccessTime());
             System.out.println("File key: " + data.fileKey());
-
         } catch (IOException e) {
             e.printStackTrace();
         }
+        //Is directory: false
+        //Is file: true
+        //Is link: false
+        //Is other: false
+        //Size: 38
+        //Creation date/time: 2018-03-01T07:44:50.756065Z
+        //Modified date/time: 2018-03-20T11:21:05.674Z
+        //Access date/time: 2018-03-05T12:11:27.938543Z
+        //File key: null
     }
 }
