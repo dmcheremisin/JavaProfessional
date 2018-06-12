@@ -1,12 +1,11 @@
 package $07Concurrency.forkJoin;
 
-/**
- * Created by Dmitrii on 12.06.2018.
- */
-
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveAction;
 
+/**
+ * Created by Dmitrii on 12.06.2018.
+ */
 public class ComplicatedAction extends RecursiveAction {
     int[] ia;
     int from;
