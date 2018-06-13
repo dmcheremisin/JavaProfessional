@@ -22,7 +22,7 @@ public class DbUtils {
             stmt.executeUpdate("CREATE TABLE species (" +
                     "id INTEGER PRIMARY KEY," +
                     "name VARCHAR(255)," +
-                    "num_acres DECIMAL)");
+                    "num_acres DOUBLE)");
             stmt.executeUpdate("CREATE TABLE animal (" +
                     "id INTEGER PRIMARY KEY ," +
                     "species_id INTEGER," +
