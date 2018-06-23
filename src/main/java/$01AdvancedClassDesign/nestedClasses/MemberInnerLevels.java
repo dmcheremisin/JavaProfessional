@@ -23,11 +23,13 @@ public class MemberInnerLevels {
     }
 
     public static void main(String[] args) {
-        MemberInnerLevels tl = new MemberInnerLevels();
-        A a = tl.new A();
+        MemberInnerLevels miv = new MemberInnerLevels();
+        MemberInnerLevels.A a1 = miv.new A();
+
+        A a = miv.new A();
         A.B b = a.new B();
         A.B.C c = b.new C();
-        A.B.C c1 = tl.new A().new B().new C();
+        A.B.C c1 = miv.new A().new B().new C();
         A.B b1 = new MemberInnerLevels().new A().new B();
         c1.printLevels();
         //3
