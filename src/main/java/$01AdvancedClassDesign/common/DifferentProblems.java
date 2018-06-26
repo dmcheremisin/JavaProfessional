@@ -8,6 +8,8 @@ class Book {
     final void mA() {
         System.out.println("In B.mA " + pages);
     }
+    private void m1() {}
+    void m2() {}
 }
 
 class Encyclopedia extends Book {
@@ -18,6 +20,11 @@ class Encyclopedia extends Book {
 //    void mA() { <- method is final and can't be overriden
 //        System.out.println("In E.mA " + pages);
 //    }
+
+    // m1() is private in Book, so it is not a problem to define it in Encyclopedia
+    void m1(){}
+    //private void m2(){} we can't make access modifier more restrictive
+    void m2(){}
 }
 
 public class DifferentProblems {
