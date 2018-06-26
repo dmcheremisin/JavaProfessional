@@ -5,11 +5,11 @@ package $01AdvancedClassDesign.staticVSdynamic;
  */
 
 class Parent {
-    public String name = "Parent class";
-    public static String sName = "Parent class";
+    public String name = "Parent";
+    public static String sName = "Parent";
 
     public String getString() {
-        return "Parent class";
+        return "Parent";
     }
     public String getName() {
         return name;
@@ -26,11 +26,11 @@ class Parent {
 }
 
 class Child extends Parent {
-    public String name = "Child class";
-    public static String sName = "Child class";
+    public String name = "Child";
+    public static String sName = "Child";
 
     public String getString() {
-        return "Child class";
+        return "Child";
     }
     public String getName() {
         return name;
@@ -47,20 +47,20 @@ public class FieldsInheritance {
     public static void main(String[] args) {
         Parent parent = new Child();
         System.out.println(parent.name);
-        // Parent class
+        // Parent
         System.out.println(parent.sName);
-        // Parent class
+        // Parent
 
         System.out.println(" =============== ");
         System.out.println(parent.getString());
-        // Child class
+        // Child
         System.out.println(parent.getName());
-        // Child class
+        // Child
         System.out.println(parent.printName());
-        // Parent class
+        // Parent
         System.out.println(parent.getSName());
-        // Child class
+        // Child
         System.out.println(parent.getStatic());
-        // Parent class
+        // Parent
     }
 }

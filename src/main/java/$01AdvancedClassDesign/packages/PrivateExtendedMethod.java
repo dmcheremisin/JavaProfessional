@@ -15,8 +15,10 @@ public class PrivateExtendedMethod extends A {
     int i = Math.round(3.5f);
 
     public static void main(String[] args) {
-        A a = new PrivateExtendedMethod();
+        A a = new PrivateExtendedMethod(); // A
         // a.print(); -> print has private access
+        PrivateExtendedMethod privateExtendedMethod = (PrivateExtendedMethod) a;
+        privateExtendedMethod.print(); // 4
     }
     void print() {
         System.out.println(i);

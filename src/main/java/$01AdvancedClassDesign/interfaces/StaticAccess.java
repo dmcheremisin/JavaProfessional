@@ -9,7 +9,7 @@ interface Boiler {
         System.out.println("shutting down");
     }
 }
-interface Vaporizer extends Boiler {  //1
+interface Vaporizer extends Boiler {
     public default void vaporize() {
         boil();
         System.out.println("Vaporized!");
@@ -22,10 +22,14 @@ public class StaticAccess implements Vaporizer {
     }
 
     public static void main(String[] args) {
-        Vaporizer v = new StaticAccess(); //2
-        v.vaporize(); //3
+        Vaporizer v = new StaticAccess();
+        v.vaporize();
+        //Boiling...
+        //Vaporized!
+
         // v.shutdown(); //4 -> error shutdown is static and belongs only to the interface
         // Vaporizer.shutdown(); -> error: shutdown belongs to the Boiler class only
+
         Boiler.shutdown();
     }
 }

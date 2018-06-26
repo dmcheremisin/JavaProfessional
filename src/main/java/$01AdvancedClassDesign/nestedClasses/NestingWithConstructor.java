@@ -6,9 +6,11 @@ package $01AdvancedClassDesign.nestedClasses;
 public class NestingWithConstructor {
     public static void main(String args[]) {
         B.C obj = new B().new C();
-        // a
+        // b
         // c
         // d
+        System.out.println(obj.c); // c
+        System.out.println(((A) obj).c);//d
     }
 }
 class A {
@@ -18,15 +20,15 @@ class A {
     }
 }
 class B extends A {
-    char c = 'a';
+    char c = 'b';
     B() {
-        super('b');
+        super('a');
     }
     class C extends A {
         char c = 'c';
         C() {
             super('d');
-            System.out.println(B.this.c); // a
+            System.out.println(B.this.c); // b
             System.out.println(C.this.c); // c
             System.out.println(super.c);  // d
         }
