@@ -17,5 +17,7 @@ public class MemberInnerInterface {
     public static void main(String[] args) {
         Secret secret = new MemberInnerInterface().new SecretMessage();
         secret.tellSecret();
+        Secret lambdaSecret = () -> System.out.println("Secret from lambda");
+        lambdaSecret.tellSecret();
     }
 }

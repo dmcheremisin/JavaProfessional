@@ -12,11 +12,11 @@ public class MemberInnerLevels {
             class C {
                 private int level = 3;
                 private void printLevels() {
-                    System.out.println(level);
-                    System.out.println(this.level);
-                    System.out.println(B.this.level);
-                    System.out.println(A.this.level);
-                    System.out.println(MemberInnerLevels.this.level);
+                    System.out.println(level); // 3
+                    System.out.println(this.level); // 3
+                    System.out.println(B.this.level); // 2
+                    System.out.println(A.this.level); // 1
+                    System.out.println(MemberInnerLevels.this.level); // 0
                 }
             }
         }

@@ -1,6 +1,7 @@
 package $01AdvancedClassDesign.enums;
 
 import java.util.Arrays;
+import java.util.function.Function;
 
 /**
  * Created by Dmitrii on 10.01.2018.
@@ -12,8 +13,8 @@ enum Seasons {
 
 // it is not possible to extend an enum
 // enum SeasonsShort extends Seasons {}
-
-enum SeasonsLong {
+// implement interface is legal
+enum SeasonsLong implements Function<String, Integer> {
     // String seasonName; fields should go after enum values declaration
 
     SPRING("spring", 10), SUMMER("summer", 30), AUTUMN("autumn", 20), WINTER("winter", 40);
@@ -37,6 +38,11 @@ enum SeasonsLong {
 
     int getVisitors() {
         return this.visitors;
+    }
+
+    @Override
+    public Integer apply(String s) {
+        return s != null ? s.length() : 0;
     }
 }
 
