@@ -1,6 +1,7 @@
 package $08InputOutput.streams;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -21,6 +22,11 @@ public class TestSorted {
         List<Book> books = new ArrayList<>();
         books.add(new Book("123", "Big Bang"));
         books.add(new Book("233", "New"));
+        // Collections.sort(books); book is not a Comparable, compilation failure
+
+        List list = (List) books;
+        Collections.sort(list); // Exception in compile time: ClassCastException: Book cannot be cast to java.lang.Comparable
+
         books.stream().sorted().forEach(b->System.out.println(b.isbn)); // ClassCastException
         // cast to comparable happens in runtime
         // Exception in thread "main" java.lang.ClassCastException: $08InputOutput.streams.TestSorted$Book cannot be cast to java.lang.Comparable
