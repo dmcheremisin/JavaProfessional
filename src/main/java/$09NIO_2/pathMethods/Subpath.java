@@ -22,5 +22,12 @@ public class Subpath {
         // 0-2 : mammal\tiger
         // 1-3 : tiger\sherkhan.jpg
         // 1-2 : tiger
+
+        System.out.println();
+        path = Paths.get("c:\\a\\b\\c.java");
+        System.out.println("0-3 : " + path.subpath(0,3)); // a\b\c.java
+        System.out.println("0-2 : " + path.subpath(0,2)); // a\b
+        System.out.println("1-3 : " + path.subpath(1,3)); // b\c.java
+        System.out.println("1-2 : " + path.subpath(1,2)); // b
     }
 }
