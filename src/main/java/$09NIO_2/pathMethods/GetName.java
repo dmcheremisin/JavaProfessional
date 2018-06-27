@@ -12,5 +12,6 @@ public class GetName {
         System.out.println(p1.getName(0).toString()); // a
         System.out.println(p1.getName(1).toString()); // b
         System.out.println(p1.getName(2).toString()); // c.java
+        System.out.println(p1.getName(3).toString()); // IllegalArgumentException
     }
 }

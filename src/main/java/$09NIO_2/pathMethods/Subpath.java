@@ -29,5 +29,11 @@ public class Subpath {
         System.out.println("0-2 : " + path.subpath(0,2)); // a\b
         System.out.println("1-3 : " + path.subpath(1,3)); // b\c.java
         System.out.println("1-2 : " + path.subpath(1,2)); // b
+
+        Path p1 = Paths.get("c:\\a\\b\\c.java");
+        System.out.println(p1.getName(0).toString()); // a
+        System.out.println(p1.getName(1).toString()); // b
+        System.out.println(p1.getName(2).toString()); // c.java
+        System.out.println(p1.getName(3).toString()); // c.java
     }
 }
