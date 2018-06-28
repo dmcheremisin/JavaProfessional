@@ -8,6 +8,8 @@ import $01AdvancedClassDesign.accessModifier.p1.A;
 public class B extends A {
     public void process(A a) {
         // a.i = a.i * 2; // -> doesn't compile because B doesn't have access to A's i field
+        B b = (B) a;
+        b.i = b.i * 2; // this compiles
     }
 
     public static void main(String[] args) {
@@ -15,5 +17,6 @@ public class B extends A {
         B b = new B();
         b.process(a);
         System.out.println(a.getI());
+        // 20
     }
 }
