@@ -1,4 +1,4 @@
-package $05DatesStringsLocalization;
+package $05DatesStringsLocalization.datesAndTimes;
 
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
