@@ -54,6 +54,9 @@ public class FormattingDateTime {
         LocalDateTime customDT = LocalDateTime.parse("11.01.1989, 20:30", parseFormat);
         System.out.println(customDT.format(custom2)); // 11.01.1989, Ср, 20:30:00
 
+        DateTimeFormatter pattern = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        System.out.println("Date : " + pattern.format(LocalDate.now()));
+
 
     }
 }
