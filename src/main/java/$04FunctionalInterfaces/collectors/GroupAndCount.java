@@ -9,6 +9,7 @@ public class GroupAndCount {
     public static void main(String[] args) {
         GroupAndCount groupAndCount = new GroupAndCount();
         System.out.println(groupAndCount.groupCharactersAndCount("apple"));
+        //{p=2, a=1, e=1, l=1}
     }
 
     public Map<Character, Long> groupCharactersAndCount(String str) {
